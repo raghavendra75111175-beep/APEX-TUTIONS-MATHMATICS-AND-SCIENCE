@@ -57,7 +57,7 @@ function App() {
         <Route path="notices" element={<Notices />} />
         <Route path="settings" element={<Settings />} />
         <Route
-  path="/dashboard/student-profile"
+  path="/Dashboard/student-profile"
   element={<StudentProfile />}
 />
       </Route>
