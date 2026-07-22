@@ -10,7 +10,7 @@ import Login from "./pages/Login/Login";
 import Enroll from "./pages/Enroll/Enroll";
 
 // Dashboard Layout
-import DashboardLayout from "./components/layout/Dashboardlayout";
+import DashboardLayout from "./components/layout/DashboardLayout";
 
 // Protected Route
 import ProtectedRoute from "./components/ProtectedRoute";
