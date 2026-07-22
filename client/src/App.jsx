@@ -30,7 +30,7 @@ function App() {
   return (
     <Routes>
 
-      {/* Website */}
+      {/* Website Routes */}
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/courses" element={<Courses />} />
@@ -39,7 +39,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/enroll" element={<Enroll />} />
 
-      {/* Dashboard */}
+      {/* Dashboard Routes */}
       <Route
         path="/dashboard"
         element={
@@ -56,13 +56,10 @@ function App() {
         <Route path="homework" element={<Homework />} />
         <Route path="notices" element={<Notices />} />
         <Route path="settings" element={<Settings />} />
-        <Route
-  path="/Dashboard/student-profile"
-  element={<StudentProfile />}
-/>
+        <Route path="student-profile" element={<StudentProfile />} />
       </Route>
 
-      {/* 404 */}
+      {/* 404 Page */}
       <Route
         path="*"
         element={
