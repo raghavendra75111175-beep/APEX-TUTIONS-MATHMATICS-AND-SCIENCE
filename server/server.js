@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
 });
 
 // Student Routes
-app.use("/api/Students", StudentRoutes);
+app.use("/api/students", StudentRoutes);
 app.use("/api/attendance", attendanceRoutes);
 app.use("/api/fees",feeRoutes);
 app.use("/api/dashboard", dashboardRoutes);
