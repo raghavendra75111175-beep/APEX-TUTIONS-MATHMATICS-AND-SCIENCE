@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api/students",
+  baseURL: "https://believable-peace-production-2fc3.up.railway.app/api",
 });
 
 export const getStudents = () => API.get("/");
