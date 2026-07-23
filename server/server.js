@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
-const studentRoutes = require("./routes/studentRoutes");
+const StudentRoutes = require("./routes/StudentRoutes");
 const attendanceRoutes = require("./routes/attendanceRoutes");
 const feeRoutes = require("./routes/feeRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
 });
 
 // Student Routes
-app.use("/api/students", studentRoutes);
+app.use("/api/Students", StudentRoutes);
 app.use("/api/attendance", attendanceRoutes);
 app.use("/api/fees",feeRoutes);
 app.use("/api/dashboard", dashboardRoutes);
