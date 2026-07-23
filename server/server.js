@@ -31,7 +31,7 @@ mongoose
 
 // Test Route
 app.get("/", (req, res) => {
-  res.send("Apex Tuitions Server is Running...");
+  res.json([]);
 });
 
 // Student Routes
@@ -47,6 +47,26 @@ app.use("/api/homework", homeworkRoutes);
 // Server
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
+
+// Handle unhandled promise rejections
+process.on("unhandledRejection", (err) => {
+  console.error("❌ Unhandled Rejection:", err);
+});
+
+// Handle uncaught exceptions
+process.on("uncaughtException", (err) => {
+  console.error("❌ Uncaught Exception:", err);
+});
+
+// Handle SIGTERM gracefully
+process.on("SIGTERM", () => {
+  console.log("SIGTERM received, closing server...");
+  server.close(() => {
+    console.log("Server closed");
+    process.exit(0);
+  });
+});
+
